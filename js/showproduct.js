@@ -84,7 +84,7 @@ function increase(id) {
         localStorage.setItem("product", JSON.stringify(element));
         let courses;
         if (localStorage.getItem("product")) {
-          courses = JSON.parse(localStorage.getItem("product"));
+          courses = JSON.parse(localStorage.getItem("product "));
           console.log(courses);
         } else {
           courses = [];
