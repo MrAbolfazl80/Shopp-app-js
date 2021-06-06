@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dress</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/vazir.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+
+<body>
+    <div class="container px-4">
+        <header>
+            <div class="row">
+                <!---------------------- modal with grid icon ---------------->
+                <div class="icon-modal col-3">
+                    <div class="d-flex align-items-center justify-content-start">
+                        <!-- Button trigger modal -->
+                        <span class="align-self-center box-shadow" data-toggle="modal" data-target="#exampleModal">
+                            <span class="fas fa-th-large"></span>
+                        </span>
+                        <!-- Modal-body -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog text-center" role="document">
+                                <div class="modal-content bg-transparent border-0">
+                                    
+                                    <div class="modal-body">
+                                        <div class="doc-header">
+                                            <h1>MENU</h1>
+                                        </div>
+                                        <div class="doc-body w-75 m-auto pt-0">
+                                            <div class="row justify-content-center">
+                                                <div class="col-6">
+                                                    <button>home</button>
+                                                    <button>home</button>
+                                                </div>
+                                                <div class="col-6">
+                                                    <button>home</button>
+                                                    <button>home</button>
+                                                </div>
+                                            </div>
+        
+                                        </div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                        <!-- modal-finished -->
+                    </div>
+                </div>
+                <!-------------------- title in header ------------------------>
+                <div class="header-text col-9 text-center">
+                    <div>
+                        <p class="mb-1">Hello zaskia</p>
+                        <h6>jakarta,INA</h6>
+                    </div>
+                </div>
+                <!--------------------- search box in header ------------------>
+                <div class="header-search col-12 pt-4 d-flex">
+                    <div class="w-100 aff d-flex animate__animated animate__rollIn">
+                        <span>
+                            <li class="fal fa-search"></li>
+                        </span>
+                        <input type="search" class="w-100">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- image header -->
+            <div class="advertising-image text-center">
+                <img src="./images/pink.jpg" alt="pink-girl">
+            </div>
+            <!-- horizontal-items -->
+            <div class="horizontal pt-4">
+                <div class="scrollmenu">
+                    <a class="button acc" onclick="filterSelection('all')" href="#home">All</a>
+                    <a class="button" onclick="filterSelection('tshirt')" href="#news">tshirt</a>
+                    <a class="button" onclick="filterSelection('pants')" href="#contact">pants</a>
+                </div>
+            </div>
+            <!-- Products -->
+            <div class="products pt-4">
+                <div class="row" id="products-box">
+                    <!-- products -->
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
