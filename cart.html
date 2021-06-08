@@ -5,17 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dress</title>
+    <title>cart</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fonts/vazir.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
-    <div class="container px-4">
+    <div class="container px-5">
         <header>
             <div class="row">
                 <!---------------------- modal with grid icon ---------------->
@@ -56,58 +55,38 @@
                     </div>
                 </div>
                 <!-------------------- title in header ------------------------>
-                <div class="header-text col-6 text-center">
+                <div class="header-text col-9 text-center">
                     <div>
-                        <p class="mb-1">Hello zaskia</p>
-                        <h6>jakarta,INA</h6>
-                    </div>
-                </div>
-                <div class="icon-modal icon-cart col-3 mr-0">
-                    <div onclick="iconCart()" class="d-flex align-items-center justify-content-start">
-                        <span class="align-self-center box-shadow">
-                            <span class="far fa-shopping-cart"></span>
-                        </span>
-                    </div>
-                </div>
-                <!--------------------- search box in header ------------------>
-                <div class="header-search col-12 pt-4 d-flex">
-                    <div class="w-100 aff d-flex animate__animated animate__rollIn">
-                        <span>
-                            <li class="fal fa-search"></li>
-                        </span>
-                        <input id="searchBox" type="search" class="w-100">
+                        <h6 class="mt-3 mr-5">Card</h6>
                     </div>
                 </div>
             </div>
         </header>
         <main>
-            <!-- image header -->
-            <div class="advertising-image text-center">
-                <img src="./images/pink.jpg" alt="pink-girl">
-            </div>
-            <!-- horizontal-items -->
-            <div class="horizontal pt-4">
-                <div class="scrollmenu">
-                    <a class="button acc" onclick="filterSelection('all')" href="#home">All</a>
-                    <a class="button" onclick="filterSelection('tshirt')" href="#news">tshirt</a>
-                    <a class="button" onclick="filterSelection('pants')" href="#contact">pants</a>
-                </div>
-            </div>
-            <!-- Products -->
-            <div class="products pt-4">
-                <div class="row" id="products-box">
-                    <!-- products -->
-                </div>
-
+            <!-- products fo cart -->
+            <div class="card-box mt-5">
+                <!-- card-item -->
             </div>
         </main>
+        <footer class="pt-3">
+            <div class="row">
+                <div class="text-foot-card col-5 pb-3">
+                    <h6>Total</h6>
+                    <h5  id="showPrice">$00.00</h5>
+                </div>
+                <div onclick="" class="btn-foot-card col-7 text-right">
+                    <button id="payPrice" class="border-0 ">Pay Now</button>
+                </div>
+            </div>
+        </footer>
     </div>
+
 
     <script src="./js/jquery.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/myclass.js"></script>
-    <script src="./js/app.js"></script>
+    <script src="./js/paycart.js"></script>
 </body>
 
 </html>

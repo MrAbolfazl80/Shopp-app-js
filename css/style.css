@@ -52,10 +52,6 @@ header div .header-text {
     padding-top: 1.5rem;
 }
 
-header div .header-text div {
-    margin-right: 5.5rem
-}
-
 header div .header-text p {
     color: #a0a3ac;
     font-size: 13px;
@@ -64,6 +60,11 @@ header div .header-text p {
 header div .header-text h6 {
     color: #2f3859;
     font-size: 14px;
+}
+header div .icon-cart div span{
+    padding: 7px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 header div .header-search span {
@@ -209,13 +210,14 @@ main .footer-product button {
     padding: 15px 20px;
     outline: none;
 }
+
 main .footer-product .btn-add-ls{
     background-color: #fb98aa;
     color: #fff;
     border-radius: 25px;
     font-size: 20px;
     padding: 15px 20px;
-    width: 139px;
+    width: fit-content;
     outline: none;
     display: none;
 }

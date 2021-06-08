@@ -1,3 +1,6 @@
+//call my class
+const ls=new Local();
+
 //my data
 var data = fetch("./products.json")
   .then((response) => response.json())
@@ -11,6 +14,7 @@ function back() {
 }
 
 // show product for add to local storage
+
 showProduct();
 function showProduct() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -40,15 +44,15 @@ function showProduct() {
           <div class="footer-product">
               <span>${res.desc}</span>
               <p class="mt-3">${res.text}</p>
-              <div class="text-center">
+              <div class="text-center pb-3">
 
-                  <button class="btn-add-card border-0 mb-3" onclick="(addToCard(${res.id}))">Add to cart</button>
+                  <button id="btnCard" class="btn-add-card border-0 " onclick="(addToCard(${res.id}))">Add to cart</button>
                 
-                  <span class="btn-add-ls m-auto mb-3">
-                      <span onclick="dcrease()" id="mines-count">-</span>
-                      <span id="count">1</span>
+                  <span id="btnLs" class="btn-add-ls m-auto">
+                      <span onclick="(dcrease(${res.id}))" id="mines-count">-</span>
+                      <span class="mr-2 ml-2" id="count">1</span>
                       <span onclick="(increase(${res.id}))" id="pluse-count">+</span>
-                      <i onclick="removeFromeBasket()" class="fas fa-trash-alt"></i>
+                      <i onclick="(removeFromeBasket(${res.id}))" class="fas fa-trash-alt ml-2"></i>
                   </span>
 
               </div>
@@ -66,41 +70,30 @@ function addToCard(id) {
   //block display add to ls button
   document.querySelector(".btn-add-ls").style.display = "block";
   //add to storage
-  // data.then((res) => {
-  //   res.forEach((element) => {
-  //     if (element.id == id) {
-  //       localStorage.setItem("product", JSON.stringify(element));
-  //     }
-  //   });
-  // });
+  ls.increase(id);
 }
 
 //when click in pluse
 function increase(id) {
   // add to storage
-  data.then((res) => {
-    res.forEach((element) => {
-      if (element.id == id) {
-        localStorage.setItem("product", JSON.stringify(element));
-        let courses;
-        if (localStorage.getItem("product")) {
-          courses = JSON.parse(localStorage.getItem("product"));
-          console.log(courses);
-        } else {
-          courses = [];
-        }
-        return courses;
-      }
-    });
-  });
+  ls.increase(id);
 }
 
 //when click in mines
-function dcrease() {
-  console.log("mines count");
+function dcrease(id) {
+  ls.dcrease(id)
 }
 
 //when click in remove
-function removeFromeBasket() {
-  console.log("remove");
+function removeFromeBasket(id) {
+  ls.removeItem(id)
 }
+// function ali() {
+//   var x= document.getElementById('btnCard');
+//   console.log(x);
+// }
+window.addEventListener('load', function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = urlParams.get("id");
+  setTimeout(function(){ ls.onloadproduct(id) }, 100);
+})
