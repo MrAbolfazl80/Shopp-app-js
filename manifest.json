@@ -1,0 +1,30 @@
+{
+  "name": "FashionShope",
+  "short_name": "FashionShope",
+  "description":"test test",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fdfdfd",
+  "theme_color": "#db4938",
+  "orientation": "portrait-primary",
+  "scope":"/",
+  "icons": [
+    {
+      "src": "./images/logo/7272.png",
+      "type": "image/png", "sizes": "72x72"
+    },
+    {
+        "src": "./images/logo/4848.png",
+      "type": "image/png", "sizes": "48x48"
+    },
+    {
+        "src": "./images/logo/9696.png",
+      "type": "image/png","sizes": "96x96"
+    },
+    {
+        "src": "./images/logo/144144.png",
+      "type": "image/png", "sizes": "144x144"
+    }
+  ]
+}
+
